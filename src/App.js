@@ -1,11 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
 // Pages
 import Home from './pages/Home'
 
 // Components
 import Header from './components/Header'
-import { useEffect, useState } from 'react'
+
+// API
 import { getGameDeals } from './api/getGameDeals'
 
 
@@ -23,15 +25,15 @@ function App() {
 
   return (
     <>
-    <Router>
-      <Header />
-      <Routes>
-        <Route 
-        path='/'
-        element={<Home gameDeals={gameDeals}/>} 
-        />
-      </Routes>
-    </Router>
+      <Router>
+        <Header />
+        <Routes>
+          <Route
+            path='/'
+            element={<Home gameDeals={gameDeals}/>}
+          />
+        </Routes>
+      </Router>
     </>
   )
 }
