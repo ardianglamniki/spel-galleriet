@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import {React } from 'react'
 import Showcase from '../components/Showcase'
 import Deals from '../components/Deals'
 
-const Home = ( {gameDeals} ) => {
 
+const Home = ({ gameDeals }) => {
+    
     return (
         <>
-        <Showcase />
-        <Deals gameDeals={gameDeals}/>
+            <Showcase />
+            <Deals gameDeals={gameDeals} />
         </>
     )
 }

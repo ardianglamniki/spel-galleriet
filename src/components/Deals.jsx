@@ -4,7 +4,6 @@ import Deal from './Deal'
 
 const Deals = ({ gameDeals }) => {
 
-    console.log(gameDeals)
     return (
         <section style={{ backgroundColor: '#eee' }}>
             <div className='container' id='deals'>
