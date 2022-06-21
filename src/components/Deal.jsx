@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom'
+const Deal = ({ deal }) => {
 
-const Deal = ({deal}) => {
   return (
     <div className='card mb-2 mx-2'>
       <img
@@ -12,19 +11,17 @@ const Deal = ({deal}) => {
         <h5 className='card-title'>{deal.title}</h5>
         <p>
           <s>
-          {deal.normalPrice}$
+            {deal.normalPrice}$
           </s>
           <br />
           {deal.salePrice}$
         </p>
-        <Link
-          to='/deal-detail'
+      <button
           className='btn btn-success'
-          onClick={() => {
-          }}
+          onClick={() => window.open(`https://www.cheapshark.com/redirect?dealID=${deal.dealID}`)} 
         >
           Läs mer om erbjudandet
-        </Link>
+        </button>
       </div>
     </div>
   )
