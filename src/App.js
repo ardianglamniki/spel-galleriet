@@ -7,21 +7,7 @@ import Home from './pages/Home'
 // Components
 import Header from './components/Header'
 
-// API
-import { getGameDeals } from './api/getGameDeals'
-
-
 function App() {
-  const [gameDeals, setGameDeals] = useState([])
-
-  useEffect(() => {
-    getDealsRequest()
-  }, [])
-
-  const getDealsRequest = async () => {
-    const deals = await getGameDeals()
-    setGameDeals(deals)
-  }
 
   return (
     <>
@@ -30,7 +16,7 @@ function App() {
         <Routes>
           <Route
             path='/'
-            element={<Home gameDeals={gameDeals}/>}
+            element={<Home />}
           />
         </Routes>
       </Router>
