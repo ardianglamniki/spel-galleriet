@@ -1,31 +1,30 @@
-import React from 'react'
 import Deal from './Deal'
 
+const Deals = ({ games, isDeals }) => {
 
-const Deals = ({ gameDeals }) => {
-
+    console.log(games)
     return (
-        <section style={{ backgroundColor: '#eee' }}>
+        
             <div className='container' id='deals'>
-                <div className='py-4 text-center'>
+                <div className='py-3 text-center'>
                     <h2>
-                        Nuvarande erbjudanden
+                        {isDeals ? 'Nuvarande erbjudanden' : games.length + ' resultat hittades'}
                     </h2>
                 </div>
                 <div className="row">
-                    {gameDeals.map((deal) => (
+                    {games.map((deal) => (
                         <div
-                            key={deal.dealID}
-                            className={gameDeals.length > 1 ? 'col-lg-4 col-md-6' : 'col'}
+                            key={deal.gameID}
+                            className={games.length > 1 ? 'col-lg-4 col-md-6' : 'col'}
                         >
                             <Deal
                                 deal={deal}
+                                isDeals={isDeals}
                             />
                         </div>
                     ))}
                 </div>
             </div>
-        </section>
     )
 }
 
