@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+
+.w-100 {
+  width: 100% !important;
+  height: 50vh;
+}
+
+.card > img {
+  width: 100% !important;
+  height: 20vh;
+}
+
+#link {
+  cursor: pointer;
+}
