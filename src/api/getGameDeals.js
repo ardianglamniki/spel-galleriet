@@ -13,7 +13,15 @@ export const getGameDetailHistory = async (gameId) => {
     const API_URL = `https://www.cheapshark.com/api/1.0/games?id=${gameId}`
 
     const response = await axios.get(API_URL)
-    console.log(response)
+
+    return response
+}
+
+export const getGamesByTitle = async (title) => {
+    const API_URL = `https://www.cheapshark.com/api/1.0/games?title=${title}`
+    console.log(API_URL)
+
+    const response = await axios.get(API_URL)
 
     return response
 }
