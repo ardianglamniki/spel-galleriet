@@ -1,29 +1,39 @@
 import axios from 'axios'
 
-export const getGameDeals = async () => {
-    const API_URL = 'https://www.cheapshark.com/api/1.0/deals'
-    const response = await axios.get(API_URL)
+let baseURL = 'https://www.cheapshark.com/api/1.0'
+export const fetchData = async (url) => {
+    try {
+        const response = await axios.get(url)
+        return response
+    }
+    catch (error) {
+        return error
+    }
+}
 
+const getGameDeals = async () => {
+    const response = await fetchData(baseURL + '/deals')
     const uniqueDeals = [... new Map(response.data.map(deal => [deal['title'], deal])).values()]
-
     return uniqueDeals
 }
 
-export const getGameDetailHistory = async (gameId) => {
-    const API_URL = `https://www.cheapshark.com/api/1.0/games?id=${gameId}`
-
-    const response = await axios.get(API_URL)
-
-    return response
+const getGameDetailHistory = async (gameId) => {
+    return fetchData(baseURL + `/games?id=${gameId}`)
 }
 
-export const getGamesByTitle = async (title) => {
-    const API_URL = `https://www.cheapshark.com/api/1.0/games?title=${title}`
-    console.log(API_URL)
+const getGamesByTitle = async (title) => {
+    return fetchData(baseURL + `/games?title=${title}`)
+}
 
-    const response = await axios.get(API_URL)
+const getDealDetail = async (dealId) => {
+    return fetchData(baseURL + `/deals?id=${dealId}`)
+}
 
-    return response
+export {
+    getGameDeals,
+    getGameDetailHistory,
+    getGamesByTitle,
+    getDealDetail
 }
 
 
