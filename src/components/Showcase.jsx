@@ -12,7 +12,7 @@ const Showcase = () => {
                             <span className='text-danger'> SpelGalleriet</span>
                         </h2>
                         <p className='lead my-4'>
-                            En webbsida där du kan söka efter erbjudanden på digitala PC-spel och kolla vilka spel som är på rea just nu från en mängd olika spelbutiker. Här kan du hitta det billigaste priset för ett visst spel och även få information om prishistoriken. API:et som används på denna webbsida är CheapShark API.
+                            En webbsida där du kan söka efter erbjudanden på digitala PC-spel och upptäcka spel som är på rea just nu från en mängd olika spelbutiker. Här kan söka upp ett spel du är intresserad av för att hitta det billigaste priset samt få mer information om recensioner, prishistorik, m.m. API:et som används på denna webbsida är CheapShark API.
                         </p>
                         <button className='btn btn-danger bg-lg mb-3'>
                             <a
