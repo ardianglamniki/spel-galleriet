@@ -77,7 +77,7 @@ const Deal = ({ deal, isDeals }) => {
             {...attributes.popper}
             className="alert alert-dark w-75"
           >
-            <h4> {deal.external}!</h4>
+            <h4> {deal.external}</h4>
             <p>Nuvarande billigaste pris: {deal.cheapest}$<br /></p>
             <p>Billigaste pris någonsin: {cheapestPrice}$</p>
             <p>Utgivare: {dealDetails.publisher}</p>
