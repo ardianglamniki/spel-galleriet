@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Router>
-        <Header />
+        <Header title='SpelGalleriet' />
         <Routes>
           <Route
             path='/'
