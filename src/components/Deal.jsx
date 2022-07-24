@@ -50,12 +50,7 @@ const Deal = ({ deal, isDeals }) => {
               <br />
               {deal.salePrice}$
             </p>
-            <button
-              className='btn btn-success'
-              onClick={() => window.open(`https://www.cheapshark.com/redirect?dealID=${deal.dealID}`)}
-            >
-              Läs mer om erbjudandet
-            </button>
+            <RedirectButton url={`https://www.cheapshark.com/redirect?dealID=${deal.dealID}`} />
           </>
           :
           <>
@@ -73,6 +68,27 @@ const Deal = ({ deal, isDeals }) => {
           </>
         }
       </div>
+      {isOpen &&
+        <>
+          <div
+            id='popover'
+            ref={setPopperElement}
+            style={styles.popper}
+            {...attributes.popper}
+            className="alert alert-dark w-75"
+          >
+            <h4> {deal.external}!</h4>
+            <p>Nuvarande billigaste pris: {deal.cheapest}$<br /></p>
+            <p>Billigaste pris någonsin: {cheapestPrice}$</p>
+            <p>Utgivare: {dealDetails.publisher}</p>
+            <p>Antal recensioner på steam: {dealDetails.steamRatingCount}</p>
+            <p>Steam rating-percent: {dealDetails.steamRatingPercent}%</p>
+            <p>Resulat på recensioner: {dealDetails.steamRatingText}</p>
+            <RedirectButton url={`https://www.cheapshark.com/redirect?dealID=${deal.cheapestDealID}`} />
+            <div id="arrow" ref={setArrowElement} style={styles.arrow} />
+          </div>
+        </>
+      }
     </div>
   )
 }
