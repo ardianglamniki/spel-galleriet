@@ -2,9 +2,7 @@ import Deal from './Deal'
 
 const Deals = ({ games, isDeals }) => {
 
-    console.log(games)
-    return (
-        
+    return (   
             <div className='container' id='deals'>
                 <div className='py-3 text-center'>
                     <h2>
