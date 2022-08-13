@@ -1,9 +1,6 @@
 # SpelGalleriet
 
-En Webbapplikation som presenterar information om spel och erbjudanden på marknaden och dirigerar användaren till spelförsäljaren. Appen använder CheapSharks API för att hämta nuvarande spelerbjudanden och hitta det billigaste priset på spel. Sökfunktion finns för att söka efter spel man är intresserad av för att få information om:
-- billigaste priset just nu
-- billigaste priset någonsin
-- recensioner på steam
+En webbapplikation som tillhandahåller information om spel och erbjudanden på marknaden. Med denna applikation kan användare bläddra genom aktuella spelerbjudanden eller söka efter ett specifikt spel för att ta del av ytterligare information om spelet, såsom omdömen på Steam, billigaste pris just nu och prishistorik. Utöver denna information finns möjlighet att dirigeras till spelförsäljaren webbsida. Appen använder CheapSharks API för att hämta nuvarande spelerbjudanden och hitta billiga priser på spel i marknaden.
 
 ## Ramverk och bibliotek
 * ReactJS
